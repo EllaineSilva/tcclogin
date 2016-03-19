@@ -12,7 +12,7 @@
     <menu>
         <ul>
             <li><a ui-sref=".cadastro" ng-click="menu.abrirMenu()">CADASTRO</a></li>
-            <li><a href="#/newProject/editar/1" ng-click="menu.abrirMenu()">EDITAR</a></li>
+            <li><a ng-href="{{menu.link}}" ng-click="menu.abrirMenu()">EDITAR</a></li>
             <li><a ui-sref=".suporte" ng-click="menu.abrirMenu()">SUPORTE</a></li>
         </ul>
     </menu>

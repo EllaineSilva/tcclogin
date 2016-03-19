@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('newProject')
-        .controller('MenuCtrl', ['LoginAPI', '$state', function (LoginAPI, $state) {
+        .controller('MenuCtrl', ['LoginAPI', '$state', '$rootScope', function (LoginAPI, $state, $rootScope) {
             var self = this, menu = true;
             self.abrirMenu = function () {
                 if (menu) {
@@ -15,6 +15,7 @@
                 LoginAPI.delCred();
                 $state.go('login');
             };
+            self.link = '#/newProject/editar/' + $rootScope.id;
         }])
         .controller('SuporteCtrl', ['SendMail', function (SendMail) {
             var self = this;
@@ -42,8 +43,9 @@
             var self = this;
             self.loginForm = function () {
                 LoginAPI.geraCred().save(self.user).$promise.then(function (data) {
-                    if (data.acess) {
+                    if (data.id) {
                         LoginAPI.setCred(self.user.un.concat(':', self.user.pw));
+                        LoginAPI.setId(data.id);
                         $state.go('newProject.cadastro');
                     } else {
                         console.error('Usuário e senha inválidos');

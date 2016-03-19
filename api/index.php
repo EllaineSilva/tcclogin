@@ -14,7 +14,7 @@ $app = new Slim\App();
 
 $app->post('/login', function ($request, $response) {
     $data = $request->getParsedBody();
-    $sql = "SELECT CASE WHEN usuario=:usuario AND senha=:password THEN 1 ELSE 0 END acess FROM usuarios";
+    $sql = "SELECT id FROM clientes WHERE usuario=:usuario AND senha=:password";
     try {
         $db = getConnection();
         $stmt = $db->prepare($sql);
@@ -23,7 +23,7 @@ $app->post('/login', function ($request, $response) {
         $stmt->execute();
         $resp = $stmt->fetch(PDO::FETCH_OBJ);
         $db = null;
-        $response->getBody()->write(json_encode($resp, JSON_NUMERIC_CHECK));
+        $response->getBody()->write(json_encode($resp));
     } catch (PDOException $e) {
         $response->getBody()->write(json_encode($e->getMessage()));
     }

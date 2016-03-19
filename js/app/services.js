@@ -9,13 +9,16 @@
                 update: {method: 'PUT'}
             });
         }])
-        .factory('LoginAPI', ['$cookies', '$resource', function ($cookies, $resource) {
+        .factory('LoginAPI', ['$cookies', '$resource', '$rootScope', function ($cookies, $resource, $rootScope) {
             return {
                 geraCred: function () {
                     return $resource('api/login');
                 },
                 setCred: function (cred) {
                     $cookies.appCreds = window.btoa(cred);
+                },
+                setId: function (id) {
+                    $rootScope.id = id;
                 },
                 chkCred: function () {
                     var returnVal = false;
