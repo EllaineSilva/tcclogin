@@ -1,0 +1,367 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600);
+
+*{
+    margin:0 auto;
+    padding:0;
+    outline: 0;
+    border: medium none;
+    font-family:'Raleway';
+    text-decoration: none;
+    transition:.4s ease-in-out;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    background-color: #F8F8F8;
+    overflow-x:hidden;
+}
+
+.conteudo{
+    width:100%;
+    margin: 10% auto;
+    overflow: hidden;
+}
+
+.imgLogin{
+    width: 35%;
+    margin-left: 10%;
+    margin-top: -2%;
+    position: absolute;
+    text-align: center;
+}
+
+.imgLogin>img{
+    width: 80%;
+}
+
+.imgLogin>p{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.formLogin{
+    width: 30%;
+    text-align: center;
+    margin-right: 15%;
+    margin-top: 1%;
+}
+
+.formLogin>form>img{
+    width: 70%;
+    margin: 5px 0 20px 0;
+}
+
+.formLogin>form>input{
+    margin-top:10px;
+    width:80%;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 1.2em;
+    font-weight:400;
+    border-radius: 7px;
+    padding-left: 20px;
+}
+
+.formLogin>form>button{
+    width:70%;
+    height:40px;
+    background-color: #F5C400;
+    color:#000;
+    border-radius: 7px;
+    margin:20px auto;
+    font-size: 1.2em;
+    font-weight:400;
+}
+
+.formLogin>form>button[disabled]{
+    background-color:#EDEDED;
+}
+
+.select-estilo{
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.subFormLogin{
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+.subFormLogin>p>a{
+    font-size: 1em;
+    font-weight: 400;
+    color: #F5C400;
+    padding-bottom: 10px;
+}
+
+.footerLogin{
+    width:100%;
+    height:70px;
+    position:absolute;
+    bottom:0;
+    color:rgba(255,255,255,0.8);
+    font-weight: 400;
+    background-color: #FED379;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.footerLogin>a>img{
+    margin: 20px 20px 0px 50px;
+    border-right: 1px solid rgba(255,255,255,0.7);
+    padding-right: 20px;
+    width: 100px;
+}
+
+.footerLogin>abbr{
+    position: absolute;
+    margin-top: 20px;
+}
+
+aside{
+    width: 100%;
+    height: 70px;
+    background-color:#f2f2f2;
+    position:fixed;
+    top: 0;
+    z-index:2;
+    border-bottom:1px solid #e7e7e7;
+    transform:translateX(0);
+    -webkit-transform:translateX(0px);
+    -moz-transform:translateX(0px);
+    -ms-transform:translateX(0px);
+}
+
+aside>header>input{
+    width: 30px;
+    margin: 20px;
+}
+
+aside>header>button{
+    background-color:#ed552b;
+    float:right;
+    width:100px;
+    height: 35px;
+    border-radius:8px;
+    font-size:1.2em;
+    color:rgba(255,255,255,.8);
+    font-weight:400;
+    margin:20px 10px 10px 10px;
+}
+
+aside>header>div.botoes{
+    width:70px;
+    height:70px;
+    float:right;
+    text-align:center;
+    border:1px solid #e7e7e7;
+    border-collapse:collapse;
+    overflow:hidden;
+}
+
+aside>header>div.botoes:hover{
+    background-color:#FED379;
+    border:1px solid #FED379;
+}
+
+aside>header>div.botoes>div{
+    width:70px;
+    height:170px;
+    padding-top:20px;
+    margin-top:0;
+}
+
+aside>header>div.botoes>div:hover{
+    padding-top:20px;
+    margin-top:-70px;
+}
+
+aside>header>div.botoes>div>img{
+    width:25px;
+}
+
+aside>header>div.botoes>div>span{
+    font-size:.80em;
+    color:#fff;
+}
+
+aside>menu{
+    width:250px;
+    height: 100vh;
+    background-color:#2b2f3e;
+    position:fixed;
+    top: 0;
+    padding-top:10px;
+    transform:translateX(-250px);
+    -webkit-transform:translateX(-250px);
+    -moz-transform:translateX(-250px);
+    -ms-transform:translateX(-250px);
+}
+
+aside>menu>ul{
+    padding-top: 100px;
+}
+
+aside>menu li a{
+    display:block;
+    border:1px solid rgba(0,0,0,0);
+    padding:14px 30px;
+    color:#FFF;
+    font-size:1.2em;
+    font-weight:400;
+}
+
+aside>menu li a:hover{
+    border-left:4px solid #fed379;
+    background:#252a36;
+    color:#fed379;
+}
+
+.move{
+    transform:translateX(250px);
+    -webkit-transform:translateX(250px);
+    -moz-transform:translateX(250px);
+    -ms-transform:translateX(250px);
+}
+
+.content{
+    margin-top: 90px;
+    width: 95%;
+}
+
+.content>h1{
+    text-align:left;
+    font-size:2.5em;
+    color:#27ccc0;
+    margin-left: 10%;
+    font-weight: 400;
+}
+
+.content>div.bloco1{
+    text-align: center;
+}
+
+.content>div.bloco1>p{
+    margin:10px auto 10px auto;
+    font-size:1.1em;
+    font-weight: 400;
+}
+
+.content>div.bloco1>div{
+    border-bottom: 1px solid rgba(200,200,200,.8);
+    margin: 20px auto;
+    width: 85%;
+}
+
+.content>form.formSuport{
+    margin: 20px auto;
+    width: 50%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.content>form.formSuport>div{
+    margin-bottom: 20px;
+}
+
+.content>form.formSuport>div>input{
+    box-sizing: border-box;
+    height: 40px;
+    margin: 4px auto;
+    border: 1px solid #E9E9E9;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    width: 99%;
+    font-weight: 400;
+}
+
+.content>form.formSuport>div>textarea{
+    width: 95%;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1.1em;
+    padding: 2%;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.content>form.formSuport>div>button.btnSuport{
+    margin-top: 20px;
+    background-color: #95CB2D;
+    width:10em;
+    height:2.2em;
+    border-radius:30px;
+    font-size:1.2em;
+    font-weight: 400;
+    color:#FFF;
+}
+
+.content>form.formSuport>div>button.btnSuport[disabled]{
+    background-color: #EDEDED;
+    color: #A7A7A7;
+}
+
+.content>img.imgSuport{
+    width: 30%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 768px){
+    .imgLogin{
+        display: none;
+    }
+    .content>form.formSuport{
+        width: 80%;
+        margin-right: auto;
+    }
+    .content>img.imgSuport{
+        display: none;
+    }
+    .formLogin{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .conteudo{
+        margin: 15% auto;
+    }
+    .formLogin{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .imgLogin{
+        display: none;
+    }
+    .none{
+        display: none;
+    }
+    .content>form.formSuport{
+        width: 90%;
+        margin-right: auto;
+    }
+    .content>form.formSuport>div>textarea{
+        width: 94%;
+    }
+    .footerLogin>abbr{
+        margin-top: 25px;
+    }
+    .footerLogin>span{
+        display: none;
+    }
+}

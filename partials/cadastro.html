@@ -1,0 +1,28 @@
+<div class="content">
+    <h1>Cadastro de Usuário</h1>
+    <div class="bloco1">
+        <p>Preencha os campos abaixo para criar usuário.</p>
+        <div></div>
+    </div>
+    <img class="imgSuport none" src="img/suporte.png"/>
+    <form class="formSuport" ng-submit="cad.userForm()" name="cadastroForm">
+        <div>
+            <input name="nome" ng-model="cad.dados.nome" type="text" placeholder="Nome completo" maxlength="40" required pattern="^((?=\w\S)([A-Za-z\.\u00C0-\u00FF\s]{3,40}))">
+            <input type="text" ng-model="cad.dados.cpf" name="cpf" placeholder="CPF" required>
+            <input type="text" ng-model="cad.dados.rg" name="rg" placeholder="RG" required>
+            <input type="text" ng-model="cad.dados.tel" name="tel" placeholder="Telefone" required>
+            <input type="text" ng-model="cad.dados.cel" name="cel" placeholder="Celular" required>
+            <input type="email" ng-model="cad.dados.email" name="email" placeholder="Email" required>
+<!--            <input type="email" ng-model="cad.dados.email" name="email" placeholder="Email" required>-->
+         <div class="select-estilo">
+              <select ng-model="cad.dados.tipoUser" required>
+                   <option value="1">Administrador</option>
+                   <option value="2">Atendente</option>
+                   <option value="3">Gestor da Agenda</option>
+                   <option value="4">Cliente</option>
+              </select>
+            </div>
+            <button class="btnSuport" ng-disabled="cadastroForm.$invalid">Enviar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="content">
+    <h1>Edição de Usuário</h1>
+    <div class="bloco1">
+        <p>Edite os campos abaixo.</p>
+        <div></div>
+    </div>
+    <img class="imgSuport none" src="img/suporte.png"/>
+    <form class="formSuport" ng-submit="edit.editUsuario()" name="editForm">
+        <div>
+            <input type="hidden" ng-model="edit.dados.id"/>
+            <input name="nome" ng-model="edit.dados.nome" type="text" placeholder="Nome completo" maxlength="40" required pattern="^((?=\w\S)([A-Za-z\.\u00C0-\u00FF\s]{3,40}))">
+            <input type="text" ng-model="edit.dados.cpf" name="cpf" placeholder="CPF" required>
+            <input type="text" ng-model="edit.dados.rg" name="rg" placeholder="RG" required>
+            <input type="text" ng-model="edit.dados.telefone" name="tel" placeholder="Telefone" required>
+            <input type="text" ng-model="edit.dados.celular" name="cel" placeholder="Celular" required>
+            <input type="email" ng-model="edit.dados.email" name="email" placeholder="Email" required>
+<!--            <input type="email" ng-model="cad.dados.email" name="email" placeholder="Email" required>-->
+           <select ng-model="edit.dados.tipo" required>
+               <option value="1">Administrador</option>
+               <option value="2">Atendente</option>
+               <option value="3">Gestor da Agenda</option>
+               <option value="4">Cliente</option>
+           </select>
+            <button class="btnSuport" ng-disabled="editForm.$invalid">Enviar</button>
+        </div>
+    </form>
+</div>

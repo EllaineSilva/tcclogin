@@ -1,0 +1,15 @@
+<div class="content">
+    <h1>Suporte</h1>
+    <div class="bloco1">
+        <p>Preencha os campos abaixo para contatar suporte.</p>
+        <div></div>
+    </div>
+    <img class="imgSuport none" src="img/suporte.png"/>
+    <form class="formSuport" ng-submit="mail.suporteForm()" name="suporteForm">
+        <div>
+            <input name="nome" ng-model="mail.dados.nome" type="text" placeholder="Nome completo" maxlength="40" required pattern="^((?=\w\S)([A-Za-z\.\u00C0-\u00FF\s]{3,40}))">
+            <input type="email" ng-model="mail.dados.email" name="email" placeholder="Email" required>
+            <button class="btnSuport" ng-disabled="suporteForm.$invalid">Enviar</button>
+        </div>
+    </form>
+</div>

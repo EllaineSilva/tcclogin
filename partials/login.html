@@ -1,0 +1,21 @@
+<div class="conteudo">
+    <div class="imgLogin">
+        <img src="img/conjunto.png"/>
+        <p>Todos os nossos sistemas são adaptados para multiplataformas. Tenha acesso aos seus dados de onde você estiver!</p>
+    </div>
+    <div class="formLogin">
+        <form ng-submit="login.loginForm()" name="loginForm">
+           <img alt="Fast Exam" src="svg/logo_fast_exam.svg"/>
+            <input type="text" placeholder="Usuário" ng-model="login.user.un" name="usuario" autofocus required maxlength="11" autocapitalize="off" pattern="^([a-z0-9]{4,11})"><br>
+            <input type="password" placeholder="Senha" ng-model="login.user.pw" name="senha" required maxlength="8" pattern="^((?=.*\d)(?=.*\w)[0-9a-z]{6,8})"><br>
+            <button ng-disabled="loginForm.$invalid">Entrar</button>
+        </form>
+        <div class="subFormLogin">
+            <p>Esqueceu sua senha?<br/><a ui-sref="suporte">Clique aqui</a></p>
+        </div>
+    </div>
+        <footer class="footerLogin">
+        <a href="http://easyit.esy.es/index.html#home"><img alt="Fast Exam" src="svg/logomarca.svg"/></a>
+        <abbr>Sistema</abbr><span></span>
+    </footer>
+</div>
